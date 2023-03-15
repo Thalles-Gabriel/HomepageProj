@@ -1,227 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<script async src="scripts/javascript.js"></script>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="stylesheet" href="css/normalize.css" ref="stylesheet" />
-		<link rel="stylesheet" href="css/stylesheet.css" rel="stylesheet" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
+	<script async src="scripts/javascript.js"></script>
 
-		<title>Homepage🏠</title>
-	</head>
+	<link rel="stylesheet" href="css/normalize.css" ref="stylesheet" />
+	<link rel="stylesheet" href="css/stylesheet.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-	<body>
-		<div id="div-video">
-			<iframe
-				id="video"
-				frameborder="0"
-				allow="controls; showinfo; autoplay; encrypted-media;"
-				aria-hidden="true"
-				data-paused="false"
-			></iframe>
+	<title>Homepage🏠</title>
+</head>
+
+<body>
+	<div id="div-video">
+		<iframe id="video" frameborder="0" allow="controls; showinfo; autoplay; encrypted-media;"
+			aria-hidden="true" data-paused="false"></iframe>
+	</div>
+	<header>
+		<div class="cabeca">
+			<time id="timedate" datetime=""></time>
+			<span id="title">
+				<h1 id="mtitle"></h1>
+				&nbsp;
+				<button id="speech" class="fa fa-headphones" type="button"
+					onclick="txtSpeech()"></button>
+			</span>
+			<a href="https://openweathermap.org/city/3447399" id="weather" target="_blank"
+				referrerpolicy="no-referrer" rel="noopener">
+				Sorocaba|<img src="" alt="" id="icone" />
+				<i class="fa fa-thermometer-quarter"></i><span id="temp"></span>&deg;C&nbsp;
+				<i class="fa fa-solid fa-droplet"></i>
+				<span id="umidade"></span>%
+			</a>
 		</div>
-		<header>
-			<div class="cabeca">
-				<time id="timedate" datetime=""></time>
-				<span id="title">
-					<h1 id="mtitle"></h1>
-					&nbsp;
-					<button
-						id="speech"
-						class="fa fa-headphones"
-						type="button"
-						onclick="txtSpeech()"
-					></button>
-				</span>
-				<a
-					href="https://openweathermap.org/city/3447399"
-					id="weather"
-					target="_blank"
-					referrerpolicy="no-referrer"
-					rel="noopener"
-				>
-					Sorocaba|<img src="" alt="" id="icone" />
-					<i class="fa fa-thermometer-quarter"></i
-					><span id="temp"></span>&deg;C&nbsp;
-					<i class="fa fa-solid fa-droplet"></i>
-					<span id="umidade"></span>%
+		<div class="cabeca div" id="div-news" aria-hidden="true">
+			<h1>Boletim</h1>
+			<input type="radio" class="tab-news" name="tabs" id="tab-geral" />
+			<label for="tab-geral" class="lbl-tabs"> Geral </label>
+			<input type="radio" class="tab-news" name="tabs" id="tab-dev" />
+			<label for="tab-dev" class="lbl-tabs"> Dev </label>
+			<input type="radio" class="tab-news" name="tabs" id="tab-econ" />
+			<label for="tab-econ" class="lbl-tabs"> Economia </label>
+			<input type="radio" class="tab-news" name="tabs" id="tab-tech" />
+			<label for="tab-tech" class="lbl-tabs"> Tecnologia </label>
+			<input type="radio" class="tab-news" name="tabs" id="tab-close" />
+			<label for="tab-close" class="lbl-tabs"> Ocultar </label>
+		</div>
+		<article class="cabeca div" id="div-content" aria-hidden="true"></article>
+	</header>
+	<main>
+		<div class="left-panel" aria-hidden="true">
+			<div class="div-panel content extra">
+				<a href="https://books.google.com/" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-solid fa-book-open"></i>
+					&nbsp;Livros
 				</a>
 			</div>
-			<div class="cabeca div" id="div-news" aria-hidden="true">
-				<h1>Boletim</h1>
-				<input type="radio" class="tab-news" name="tabs" id="tab-geral" />
-				<label for="tab-geral" class="lbl-tabs"> Geral </label>
-				<input type="radio" class="tab-news" name="tabs" id="tab-dev" />
-				<label for="tab-dev" class="lbl-tabs"> Dev </label>
-				<input type="radio" class="tab-news" name="tabs" id="tab-econ" />
-				<label for="tab-econ" class="lbl-tabs"> Economia </label>
-				<input type="radio" class="tab-news" name="tabs" id="tab-tech" />
-				<label for="tab-tech" class="lbl-tabs"> Tecnologia </label>
-				<input type="radio" class="tab-news" name="tabs" id="tab-close" />
-				<label for="tab-close" class="lbl-tabs"> Ocultar </label>
+			<div class="div-panel content extra">
+				<a href="https://youtube.com" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-brands fa-youtube" aria-hidden="true"></i>
+					&nbsp;Youtube
+				</a>
 			</div>
-			<article class="cabeca div" id="div-content" aria-hidden="true"></article>
-		</header>
-		<main>
-			<div class="left-panel" aria-hidden="true">
-				<div class="div-panel content extra">
-					<a
-						href="https://books.google.com/"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-solid fa-book-open"></i>
-						&nbsp;Livros
-					</a>
-				</div>
-				<div class="div-panel content extra">
-					<a
-						href="https://youtube.com"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-brands fa-youtube" aria-hidden="true"></i>
-						&nbsp;Youtube
-					</a>
-				</div>
-				<div class="div-panel content extra">
-					<a
-						href="https://monkeytype.com"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-solid fa-keyboard"></i>
-						&nbsp;MonkeyType
-					</a>
-				</div>
-				<div class="div-panel content extra">
-					<a
-						href="https://twitter.com"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-brands fa-twitter"></i>
-						&nbsp;Twitter
-					</a>
-				</div>
+			<div class="div-panel content extra">
+				<a href="https://monkeytype.com" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-solid fa-keyboard"></i>
+					&nbsp;MonkeyType
+				</a>
 			</div>
-			<div class="right-panel" aria-hidden="true">
-				<div class="div-panel content extra">
-					<a
-						href="https://mail.google.com/"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-solid fa-envelope"></i>
-						&nbsp;E-mail
-					</a>
+			<div class="div-panel content extra">
+				<a href="https://twitter.com" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-brands fa-twitter"></i>
+					&nbsp;Twitter
+				</a>
+			</div>
+		</div>
+		<div class="right-panel" aria-hidden="true">
+			<div class="div-panel content extra">
+				<a href="https://mail.google.com/" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-solid fa-envelope"></i>
+					&nbsp;E-mail
+				</a>
+			</div>
+			<div class="div-panel content extra">
+				<a href="https://bitbucket.org/" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-brands fa-bitbucket"></i>
+					&nbsp;BitBucket
+				</a>
+			</div>
+			<div class="div-panel content extra">
+				<a href="https://codepen.io/" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-brands fa-codepen"></i>
+					&nbsp;CodePen
+				</a>
+			</div>
+			<div class="div-panel content extra">
+				<a href="https://github.com/" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-brands fa-github"></i>
+					&nbsp;GitHub
+				</a>
+			</div>
+			<div class="div-panel content extra">
+				<a href="https://clickup.com/" target="_blank" referrerpolicy="no-referrer"
+					rel="noopener">
+					<i class="fa-solid fa-list-check"></i>
+					&nbsp;ClickUp
+				</a>
+			</div>
+		</div>
+		<div class="center-image">
+			<div class="center-panel">
+				<label class="div-panel content" id="news" for="chk-news">
+					<input type="checkbox" id="chk-news" />
+					<h1>Notícias</h1>
+				</label>
+				<div class="div-panel sidebar" data-hover="false" id="lounge">
+					<h1>Entretenimento</h1>
 				</div>
-				<div class="div-panel content extra">
-					<a
-						href="https://bitbucket.org/"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-brands fa-bitbucket"></i>
-						&nbsp;BitBucket
-					</a>
+				<div class="div-panel sidebar" data-hover="false" id="office">
+					<h1>Escritório</h1>
 				</div>
-				<div class="div-panel content extra">
-					<a
-						href="https://codepen.io/"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-brands fa-codepen"></i>
-						&nbsp;CodePen
-					</a>
+				<div class="div-panel content" id="youtube">
+					<i class="fa-solid fa-mug-hot" style="transform: scale(3)"
+						aria-hidden="true"></i>
 				</div>
-				<div class="div-panel content extra">
-					<a
-						href="https://github.com/"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-brands fa-github"></i>
-						&nbsp;GitHub
-					</a>
-				</div>
-				<div class="div-panel content extra">
-					<a
-						href="https://clickup.com/"
-						target="_blank"
-						referrerpolicy="no-referrer"
-						rel="noopener"
-					>
-						<i class="fa-solid fa-list-check"></i>
-						&nbsp;ClickUp
-					</a>
+				<div class="div-panel content" id="search">
+					<details>
+						<summary>
+							<h1>Pesquisa</h1>
+						</summary>
+						<form action="https://duckduckgo.com/" method="GET" id="src-form"
+							target="_blank" referrerpolicy="no-referrer" rel="noopener">
+							<div id="src-div">
+								<input type="text" name="q" id="in-search"
+									placeholder="Escreva algo..."
+									spellcheck="true" />
+								<button type="submit"
+									class="fa-solid fa-magnifying-glass"
+									id="btn-search"></button>
+							</div>
+						</form>
+					</details>
 				</div>
 			</div>
-			<div class="center-image">
-				<div class="center-panel">
-					<label class="div-panel content" id="news" for="chk-news">
-						<input type="checkbox" id="chk-news" />
-						<h1>Notícias</h1>
-					</label>
-					<div class="div-panel sidebar" data-hover="false" id="lounge">
-						<h1>Entretenimento</h1>
-					</div>
-					<div class="div-panel sidebar" data-hover="false" id="office">
-						<h1>Escritório</h1>
-					</div>
-					<div class="div-panel content" id="youtube">
-						<i class="fa-solid fa-mug-hot" style="transform: scale(3)" aria-hidden="true"></i>
-					</div>
-					<div class="div-panel content" id="search">
-						<details>
-							<summary>
-								<h1>Pesquisa</h1>
-							</summary>
-							<form
-								action="https://duckduckgo.com/"
-								method="GET"
-								id="src-form"
-								target="_blank"
-								referrerpolicy="no-referrer"
-								rel="noopener"
-							>
-								<div id="src-div">
-									<input
-										type="text"
-										name="q"
-										id="in-search"
-										placeholder="Escreva algo..."
-										spellcheck="true"
-									/>
-									<button
-										type="submit"
-										class="fa-solid fa-magnifying-glass"
-										id="btn-search"
-									></button>
-								</div>
-							</form>
-						</details>
-					</div>
-				</div>
-			</div>
-		</main>
-	</body>
+		</div>
+	</main>
+</body>
+
 </html>
